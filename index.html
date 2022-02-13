@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Style -->
+  <link rel="stylesheet" href="./src/style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Tip Calculator</title>
+
+
+</head>
+<body>
+  <h1 class="splitter">spli<br />tter</h1>
+  <main class="app">
+    <div class="fields">
+      <div class="fields__bill">
+        <label>Bill</label>
+        <i class="fa-solid fa-dollar-sign"></i>
+        <input type="text" placeholder="0" name="bill" />
+      </div>
+      <div class="fields__tip">
+        <label>Select Tip %</label>
+        <div class="fields__tip__btns">
+          <input type="submit" value="5%" data-percentage="0.05">
+          <input type="submit" value="10%" data-percentage="0.10">
+          <input type="submit" value="15%" data-percentage="0.15">
+          <input type="submit" value="25%" data-percentage="0.25">
+          <input type="submit" value="50%" data-percentage="0.50">
+          <input type="text" placeholder="Custom" name="custom" />
+        </div>
+      </div>
+      <div class="fields__people">
+        <span class="fields__people__zero" style="display:none;" >Can't be zero</span>
+        <label>Number of People</label>
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="0" name="people" />
+      </div>
+    </div>
+    <div class="result">
+      <div>
+        <div class="result__tip result__board">
+          <span class="result__text">Tip Amount<br /><span>/ person</span></span>
+          <span class="result__num">$0.00</span>
+        </div>
+        <div class="result__total result__board">
+          <span class="result__text">Total<br /><span>/ person</span></span>
+          <span class="result__num">$0.00</span>
+        </div>
+      </div>
+      <input type="submit" value="Reset" class="result__reset" />
+    </div>
+  </main>
+  <script src="src/index.js"></script>
+</body>
+</html>
